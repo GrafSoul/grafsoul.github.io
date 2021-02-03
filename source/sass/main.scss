@@ -1,24 +1,19 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+//*************************** Theme Colours ****************************/
+// Define theme colour scheme
+$theme-color: #4B6A78;
+$text-color: #3F4650;
+$text-color-secondary: #545E6C;
+$text-grey: #97AAC3;
+$divider: #e8e8e8;
+$lighter-grey: #ccc;
+$darker-grey: #666;
+$smoky-white: #f5f5f5;
+$heart: #fb866a;
 
-@import "components/bg-video";
-@import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/form";
-@import "components/popup";
-@import "components/story";
 
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
-@import "layout/navigation";
-
-@import "pages/home";
+//*************************** Theme Styles ****************************/
+// Import theme styles
+@import "theme/mixins";
+@import "theme/base";
+@import "theme/responsive";

@@ -27,7 +27,7 @@ const config = {
         sassPngSprite: './source/sass/base',
     },
     output: {
-        path: './public',
+        path: './docs',
     },
 };
 
