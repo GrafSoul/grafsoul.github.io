@@ -17,6 +17,7 @@ module.exports = function (gulp, plugins, config, browserSync, errors) {
             .pipe(plugins.htmlhint())
             .pipe(plugins.htmlhint.reporter())
             .pipe(plugins.plumber.stop())
+            .pipe(plugins.htmlmin({ collapseWhitespace: true }))
             .pipe(gulp.dest(config.output.path))
             .pipe(plugins.filesize())
             .pipe(browserSync.stream());

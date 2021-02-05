@@ -31,6 +31,7 @@
 		"gulp-concat": "^2.6.1",
 		"gulp-filesize": "0.0.6",
 		"gulp-htmlhint": "^4.0.0",
+		"gulp-htmlmin": "^5.0.1",
 		"gulp-if": "^3.0.0",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-jshint": "^2.1.0",
