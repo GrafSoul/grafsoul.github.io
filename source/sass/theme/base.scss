@@ -232,11 +232,11 @@ p {
 
 .skillset {
     .item {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         overflow: hidden;
     }
     .level-title {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 0;
         margin-bottom: 12px;
     }
@@ -245,11 +245,42 @@ p {
     .level-bar {
         height: 12px;
         background: $smoky-white;
+        margin-bottom: 20px;
         @include border-radius(2px);
+    }
+
+    .badge {
+        margin-bottom: 5px;
+        background-color: rgb(3, 143, 143);
+        border: none;
+        a {
+            display: inline-block;
+            font-size: 1.2em;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 5px;
+            color: rgb(255, 255, 255);
+        }
+
+        &:hover {
+            background-color:  lighten(teal, 10%);;
+        }
+
+    }
+
+    .skills {
+        margin-left: 30%;
     }
     
     .theme-progress-bar {
-	    background: lighten($theme-color, 10%);
+	    background: lighten($theme-color, 40%);
+    }
+}
+
+.certificates {
+    .intro {
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
 }
 
