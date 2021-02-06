@@ -215,9 +215,14 @@ p {
     
     .project-title {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 700;
         margin-top: 0;
         margin-bottom: 5px;
+
+        a {
+            color: $theme-color;
+        }
+
     }
     .projects-section {
         .intro {
@@ -298,4 +303,12 @@ p {
         color: $heart;
     }
     
+}
+
+.main-wrapper .section-title .icon-holder .svg-inline--fa {
+    margin-top: 7px;
+}
+
+.main-wrapper .section-title .icon-holder {
+    top: -4px;
 }
