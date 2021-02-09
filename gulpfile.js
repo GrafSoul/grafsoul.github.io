@@ -20,7 +20,7 @@ const config = {
         sassfiles: './source/sass/**/*.scss',
         html: './source/html/**/*.html',
         fonts: './source/fonts/**/*.*',
-        video: './source/video/**/*.*',
+        pdf: './source/pdf/**/*.*',
         images: './source/images/**/*.*',
         pngSprite: './source/images/for_png_sprite/*.*',
         svgSprite: './source/images/for_svg_sprite/',
@@ -102,9 +102,9 @@ const pngSprite = require('./tasks/pngsprite')(gulp, plugins, config);
 // =========================================================================
 const svgSprite = require('./tasks/svgsprite')(gulp, plugins, config);
 
-// Video
+// Pdf
 // =========================================================================
-const video = require('./tasks/video')(
+const pdf = require('./tasks/pdf')(
     gulp,
     plugins,
     config,
@@ -127,7 +127,7 @@ function watch_files(done) {
     gulp.watch(config.input.html, gulp.series(html));
     gulp.watch(config.input.js, gulp.series(js));
     gulp.watch(config.input.fonts, gulp.series(fonts));
-    gulp.watch(config.input.video, gulp.series(video));
+    gulp.watch(config.input.pdf, gulp.series(pdf));
     gulp.watch(config.input.images, gulp.series(imageMin));
     gulp.watch(config.input.pngSprite, gulp.series(pngSprite));
     gulp.watch(config.input.svgSprite + '*.*', gulp.series(svgSprite));
@@ -142,7 +142,7 @@ gulp.task(
         imageMin,
         svgSprite,
         pngSprite,
-        video,
+        pdf,
         fonts,
         html,
         js,

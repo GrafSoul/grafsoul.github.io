@@ -7,15 +7,15 @@
 // Author URI: https://github.com/GrafSoul , http://networkroom.ru
 
 // =========================================================================
-// Video
+// Pdf
 // =========================================================================
 
 module.exports = function (gulp, plugins, config, browserSync, errors) {
-    return function video(done) {
-        gulp.src(config.input.video)
+    return function pdf(done) {
+        gulp.src(config.input.pdf)
             .pipe(plugins.plumber({ errorHandler: errors }))
             .pipe(plugins.plumber.stop())
-            .pipe(gulp.dest(config.output.path + '/images/video'))
+            .pipe(gulp.dest(config.output.path + '/images/pdf'))
             .pipe(plugins.filesize())
             .pipe(browserSync.stream());
         done();
