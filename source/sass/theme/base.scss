@@ -28,19 +28,6 @@ p {
     line-height: 1.5;
 }
 
-.ru{
-    display: none;
-}
-
-.russian,
-.english {
-    display: none;
-    transition: all 0.3s ease;
-}
-.active {
-    display: block;
-}
-
 .wrapper {
     background:$theme-color;
     max-width: 960px;
@@ -352,4 +339,17 @@ p {
 
 .main-wrapper .section-title .icon-holder {
     top: -4px;
+}
+
+.ru{
+    display: none;
+}
+
+.russian,
+.english {
+    display: none;
+    transition: all 0.3s ease;
+}
+.active {
+    display: block;
 }
