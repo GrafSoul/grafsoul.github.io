@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'Roboto', sans-serif;
     color: $text-color-secondary;
     background: $smoky-white;
     font-size: 14px;
@@ -7,7 +7,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6  {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
 }
 
@@ -17,7 +22,7 @@ a {
     &:hover {
         text-decoration: underline;
         color: darken($theme-color, 30%);
-        @include transition (all 0.4s ease-in-out);
+        @include transition(all 0.4s ease-in-out);
     }
     &:focus {
         text-decoration: none;
@@ -29,12 +34,12 @@ p {
 }
 
 .wrapper {
-    background:$theme-color;
+    background: $theme-color;
     max-width: 960px;
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
-    @include box-shadow(0px 2px 4px rgba(0,0,0,0.1));
+    @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .sidebar-wrapper {
@@ -68,13 +73,12 @@ p {
         margin-bottom: 0;
     }
     .profile {
-        border:5px solid #4B6A78;
+        border: 5px solid #4b6a78;
         border-radius: 50%;
         margin-bottom: 15px;
-
     }
     .contact-list {
-        .svg-inline--fa  {
+        .svg-inline--fa {
             margin-right: 5px;
             font-size: 18px;
             vertical-align: middle;
@@ -86,7 +90,7 @@ p {
             }
         }
         .email {
-            .svg-inline--fa  {
+            .svg-inline--fa {
                 font-size: 14px;
             }
         }
@@ -131,7 +135,7 @@ p {
             color: rgba(256, 256, 256, 0.6);
         }
     }
-    
+
     .languages-list {
         margin-bottom: 0;
         li {
@@ -141,7 +145,7 @@ p {
             }
         }
     }
-    
+
     .interests-list {
         margin-bottom: 0;
         li {
@@ -165,7 +169,7 @@ p {
         position: relative;
         margin-top: 0;
         margin-bottom: 20px;
-        .icon-holder  {
+        .icon-holder {
             width: 30px;
             height: 30px;
             margin-right: 8px;
@@ -178,16 +182,15 @@ p {
             position: relative;
             top: -8px;
             .svg-inline--fa {
-	            font-size: 14px;
-	            margin-top: 6px;
+                font-size: 14px;
+                margin-top: 6px;
             }
         }
-
     }
     .section {
         margin-bottom: 60px;
     }
-    
+
     .experiences-section {
         .item {
             margin-bottom: 30px;
@@ -215,7 +218,7 @@ p {
         margin-bottom: 10px;
         color: $text-grey;
     }
-    
+
     .project-title {
         font-size: 16px;
         font-weight: 700;
@@ -225,7 +228,6 @@ p {
         a {
             color: $theme-color;
         }
-
     }
     .projects-section {
         .intro {
@@ -235,7 +237,6 @@ p {
             margin-bottom: 5px;
         }
     }
-    
 }
 
 .skillset {
@@ -248,8 +249,7 @@ p {
         margin-top: 0;
         margin-bottom: 12px;
     }
-    
-    
+
     .level-bar {
         height: 12px;
         background: $smoky-white;
@@ -271,17 +271,16 @@ p {
         }
 
         &:hover {
-            background-color:  lighten(teal, 10%);;
+            background-color: lighten(teal, 10%);
         }
-
     }
 
     .skills {
         margin-left: 30%;
     }
-    
+
     .theme-progress-bar {
-	    background: lighten($theme-color, 40%);
+        background: lighten($theme-color, 40%);
     }
 }
 
@@ -298,7 +297,7 @@ p {
     justify-content: center;
     align-items: center;
 
-    position:fixed;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -308,14 +307,14 @@ p {
         width: 36px;
         height: 34px;
         text-align: center;
-        color:rgb(255, 255, 255);
-        background-color:rgb(38, 54, 61);
+        color: rgb(255, 255, 255);
+        background-color: rgb(38, 54, 61);
         border-radius: 50%;
-        margin-right: 5px;        
+        margin-right: 5px;
 
         &:hover {
-            color:rgb(255, 255, 255);
-            background-color:rgb(83, 116, 131);
+            color: rgb(255, 255, 255);
+            background-color: rgb(83, 116, 131);
         }
     }
 }
@@ -326,14 +325,13 @@ p {
     text-align: center;
     .copyright {
         line-height: 1.6;
-        color: $text-color-secondary;        
-        font-size: 13px;       
-    }  
-    
+        color: $text-color-secondary;
+        font-size: 13px;
+    }
+
     .fa-heart {
         color: $heart;
     }
-    
 }
 
 .main-wrapper .section-title .icon-holder .svg-inline--fa {
@@ -344,7 +342,7 @@ p {
     top: -4px;
 }
 
-.ru{
+.en {
     display: none;
 }
 
