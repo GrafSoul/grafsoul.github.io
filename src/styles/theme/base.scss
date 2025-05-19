@@ -1,3 +1,18 @@
+// Импортируем модуль color и mixins
+@use 'sass:color';
+@use 'mixins' as mix;
+
+// Объявляем переменные, которые будут переданы из main.scss
+$theme-color: #4b6a78 !default;
+$text-color: #3f4650 !default;
+$text-color-secondary: #545e6c !default;
+$text-grey: #97aac3 !default;
+$divider: #e8e8e8 !default;
+$lighter-grey: #ccc !default;
+$darker-grey: #666 !default;
+$smoky-white: #f5f5f5 !default;
+$heart: #fb866a !default;
+
 body {
     font-family: 'Roboto', sans-serif;
     color: $text-color-secondary;
@@ -17,12 +32,12 @@ h6 {
 }
 
 a {
-    color: darken($theme-color, 15%);
+    color: color.adjust($theme-color, $lightness: -15%);
 
     &:hover {
         text-decoration: underline;
-        color: darken($theme-color, 30%);
-        @include transition(all 0.4s ease-in-out);
+        color: color.adjust($theme-color, $lightness: -30%);
+        @include mix.transition(all 0.4s ease-in-out);
     }
     &:focus {
         text-decoration: none;
@@ -39,7 +54,7 @@ p {
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
-    @include box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+    @include mix.box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .sidebar-wrapper {
@@ -165,7 +180,7 @@ p {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 500;
-        color: darken($theme-color, 15%);
+        color: color.adjust($theme-color, $lightness: -15%);
         position: relative;
         margin-top: 0;
         margin-bottom: 20px;
@@ -175,8 +190,8 @@ p {
             margin-right: 8px;
             display: inline-block;
             color: #fff;
-            @include border-radius(50%);
-            background: darken($theme-color, 15%);
+            @include mix.border-radius(50%);
+            background: color.adjust($theme-color, $lightness: -15%);
             text-align: center;
             font-size: 16px;
             position: relative;
@@ -254,7 +269,7 @@ p {
         height: 12px;
         background: $smoky-white;
         margin-bottom: 20px;
-        @include border-radius(2px);
+        @include mix.border-radius(2px);
     }
 
     .badge {
@@ -271,7 +286,7 @@ p {
         }
 
         &:hover {
-            background-color: lighten(teal, 10%);
+            background-color: color.adjust(teal, $lightness: 10%);
         }
     }
 
@@ -280,7 +295,7 @@ p {
     }
 
     .theme-progress-bar {
-        background: lighten($theme-color, 40%);
+        background: color.adjust($theme-color, $lightness: 40%);
     }
 }
 

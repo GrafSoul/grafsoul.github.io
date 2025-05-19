@@ -4,10 +4,10 @@ import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig(() => {
     return {
-        base: '/',
+        base: './',
         root: path.resolve(__dirname, 'src'),
         build: {
-            outDir: '../build',
+            outDir: '../docs',
             rollupOptions: {
                 output: {
                     entryFileNames: 'assets/js/[name].[hash].js',
