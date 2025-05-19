@@ -10,6 +10,37 @@
         <meta name="description" content="Dmitriy Zatulovskiy - Resume/CV" />
         <meta name="author" content="Dmitriy Zatulovskiy" />
         <link rel="shortcut icon" href="./assets/images/icons/favicon.ico" />
+
+        <!-- Встроенные стили для предотвращения мигания -->
+        <style>
+            /* Скрываем содержимое до загрузки стилей */
+            html {
+                visibility: hidden;
+                opacity: 0;
+                background-color: #f5f5f5;
+                transition: opacity 0.1s ease;
+            }
+            html.ready {
+                visibility: visible;
+                opacity: 1;
+            }
+            /* Базовые стили для предварительной отрисовки */
+            body {
+                font-family: 'Roboto', sans-serif;
+                background: #f5f5f5;
+                margin: 0;
+                padding: 0;
+            }
+            .wrapper {
+                background: #4b6a78;
+                max-width: 960px;
+                margin: 30px auto 0;
+            }
+            .ru {
+                display: none;
+            }
+        </style>
+
         <!-- Google Font -->
         <link
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic"
@@ -43,23 +74,12 @@
                     <!-- <img class="profile" src="./assets/images/template/dz_1.jpg" width="200" alt="Dmitriy Zatulovskiy" /> -->
                     <h1 class="name en">Dmitriy<br />Zatulovskiy</h1>
                     <h1 class="name ru">Дмитрий<br />Затуловский</h1>
-                    <h3 class="tagline">
-                        Front End Developer,<br />UI/UX Designer,<br />HTML
-                        Layout maker
-                    </h3>
+                    <h3 class="tagline">Frontend Web Developer</h3>
                 </div>
                 <!--//profile-container-->
 
                 <div class="contact-container container-block">
                     <ul class="list-unstyled contact-list">
-                        <li class="twitter">
-                            <i class="fab fa-skype"></i
-                            ><a
-                                href="https://join.skype.com/invite/elaqxk6G0d0N"
-                                target="_blank"
-                                >grafsoul</a
-                            >
-                        </li>
                         <li class="twitter">
                             <i class="fab fa-telegram-plane"></i
                             ><a href="https://tlgg.ru/@GrafSoul" target="_blank"
@@ -110,14 +130,6 @@
                             <i class="fab fa-codepen"></i
                             ><a href="https://codepen.io/Xgraf" target="_blank"
                                 >CodePen/Xgarf</a
-                            >
-                        </li>
-                        <li class="website">
-                            <i class="fab fa-jsfiddle"></i
-                            ><a
-                                href="https://jsfiddle.net/user/NetWorkRoom/fiddles/"
-                                target="_blank"
-                                >JSFiddle/ NetWorkRoom</a
                             >
                         </li>
                     </ul>
@@ -215,28 +227,48 @@
                     </h2>
                     <div class="summary">
                         <p class="en">
-                            My name is Dmitriy Zatulovskiy. I was born in 1972,
-                            and I am 49 years old. I started my professional
-                            career in 1996. I was designing and implementing
-                            computer networks for several years. Since 1999, I
-                            was worked in the field of print design and
-                            advertising, for almost 12 years. In the last place,
-                            I was held the position of art director. For the
-                            last 9 years, I have been engaged in web
-                            development, as a designer, HTML and CSS coder and
-                            JavaScript programmer. I work as a freelancer.
+                            My name is Dmitry Zatulovsky. I began my
+                            professional career in 1996 with the design and
+                            implementation of computer networks. For more than
+                            ten years, I worked in the fields of print, design,
+                            and advertising, progressing from designer to art
+                            director.
+                        </p>
+                        <p class="en">
+                            In recent years, I have fully dedicated myself to
+                            web development and JavaScript programming. I create
+                            modern interfaces and complex web applications,
+                            specializing in React and related technologies, and
+                            have also developed several WebXR applications.
+                        </p>
+                        <p class="en">
+                            Currently, I work as a freelancer and collaborate
+                            with companies as a Lead Frontend React Developer —
+                            managing development teams, designing solution
+                            architectures, and delivering end-to-end projects.
                         </p>
 
                         <p class="ru">
-                            Меня зовут Дмитрий Затуловский. Родился в 1972 году,
-                            мне 49 лет. Я начал свою профессиональную карьеру в
-                            1996 году. Проектировал и внедрял компьютерные сети
-                            в течение нескольких лет. С 1999 года работал в
-                            сфере печати, дизайна и рекламы, почти 12 лет. На
-                            последнем месте работы занимал должность
-                            арт-директора. Последние 9 лет занимаюсь
-                            веб-разработкой, как дизайнер, HTML и CSS кодер, и
-                            JavaScript-программист. Я фрилансер.
+                            Меня зовут Дмитрий Затуловский. Профессиональную
+                            деятельность начал в 1996 году с проектирования и
+                            внедрения компьютерных сетей. Более десяти лет
+                            работал в сфере печати, дизайна и рекламы, где
+                            прошёл путь от дизайнера до арт-директора.
+                        </p>
+                        <p class="ru">
+                            Последние годы полностью посвятил веб-разработке и
+                            программированию на JavaScript. Реализую современные
+                            интерфейсы и сложные веб-приложения, специализируюсь
+                            на работе с фреймворком React и сопутствующими
+                            технологиями, а также реализовал несколько
+                            WebXR-приложений.
+                        </p>
+                        <p class="ru">
+                            В настоящее время работаю как фрилансер и
+                            сотрудничаю с компаниями в роли Lead Frontend React
+                            Developer — руковожу командами разработчиков,
+                            проектирую архитектуру решений и реализую проекты
+                            полного цикла.
                         </p>
 
                         <p class="en">
@@ -260,7 +292,446 @@
                 </section>
                 <!--//section-->
 
-                <section class="section projects-section">
+                <section class="section experiences-section">
+                    <h2 class="section-title en">
+                        <span class="icon-holder"
+                            ><i class="fas fa-briefcase"></i></span
+                        >Experiences
+                    </h2>
+                    <h2 class="section-title ru">
+                        <span class="icon-holder"
+                            ><i class="fas fa-briefcase"></i></span
+                        >Опыт
+                    </h2>
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title">
+                                    Lead Frontend React Developer<br />& Mobile
+                                    Flutter Developer
+                                </h3>
+                                <div class="time en">2022 — 2025</div>
+                                <div class="time ru">2022 — 2025</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                Colibrity Agency (France, Paris)
+                            </div>
+                            <div class="company ru">
+                                Colibrity Agency (Франция, Париж)
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                Led the development of frontend solutions and
+                                mobile applications for international clients.
+                                Organized and managed the team, oversaw project
+                                architecture, interacted with customers, and
+                                ensured high-quality releases. Implemented
+                                modern web applications using React and
+                                cross-platform mobile solutions with Flutter.
+                            </p>
+                            <p class="ru">
+                                Руководил разработкой frontend-решений и
+                                мобильных приложений для международных клиентов
+                                агентства. Организовывал работу команды, отвечал
+                                за архитектуру проектов, взаимодействовал с
+                                заказчиками и обеспечивал качество релизов.
+                                Реализовал современные веб-приложения на React и
+                                кроссплатформенные мобильные решения на Flutter.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title">
+                                    Front End Developer, UI/UX Designer,<br />HTML
+                                    Layout maker
+                                </h3>
+                                <div class="time en">2011 — 2022</div>
+                                <div class="time ru">2011 — 2022</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">Freelancer</div>
+                            <div class="company ru">Фрилансер</div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                Developed interfaces for web services, corporate
+                                websites, online stores, and landing pages for
+                                various clients. Built SPA applications with
+                                ReactJS and VueJS. Handled the full workflow
+                                from UX design to adaptive layout
+                                implementation.
+                            </p>
+                            <p class="ru">
+                                Разрабатывал интерфейсы для веб-сервисов,
+                                корпоративные сайты, интернет-магазины и
+                                лендинги для различных клиентов. Создавал
+                                SPA-приложения на ReactJS и VueJS. Выполнял
+                                полный цикл работ от проектирования UX до
+                                внедрения адаптивной верстки.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">Designer</h3>
+                                <h3 class="job-title ru">Дизайнер</h3>
+                                <div class="time">2010 - 2011</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                "SM-Alliance", Tashkent
+                            </div>
+                            <div class="company ru">"SM-Alliance", Ташкент</div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                Worked on promoting LG and AOC products in the
+                                market. Developed advertising campaigns,
+                                signage, stands, brand identity for retail
+                                points, and store designs. Prepared layouts for
+                                print media and outdoor advertising, created
+                                flash banners for online campaigns.
+                            </p>
+                            <p class="ru">
+                                Занимался продвижением продукции LG и AOC на
+                                рынок. Разрабатывал рекламные кампании, вывески,
+                                стенды, фирменный стиль торговых точек, а также
+                                дизайн магазинов. Готовил макеты для публикации
+                                в СМИ и наружной рекламы, создавал флеш-баннеры
+                                для интернет-кампаний.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">Art director</h3>
+                                <h3 class="job-title ru">Арт-директор</h3>
+                                <div class="time">2009</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">"DiPLUS", Tashkent</div>
+                            <div class="company ru">"DiPLUS", Ташкент</div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                Responsible for redesigning and formatting the
+                                newspaper: managed layout, prepared
+                                illustrations and photos for print, coordinated
+                                with printing houses and photographers,
+                                monitored print quality, and provided technical
+                                support for the editorial team.
+                            </p>
+
+                            <p class="ru">
+                                Отвечал за редизайн и оформление газеты:
+                                занимался версткой, подготовкой иллюстраций и
+                                фото к печати, взаимодействием с типографиями и
+                                фотографами, контролем качества печати и
+                                технической поддержкой редакции.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">Art director</h3>
+                                <h3 class="job-title ru">Арт-директор</h3>
+                                <div class="time">2008 - 2009</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                "Career Press" , Tashkent
+                            </div>
+                            <div class="company ru">
+                                "Career Press" , Ташкент
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                Art director of the "Careerist" magazine.
+                                Developed the magazine's concept and visual
+                                style, managed layout, handled illustrations and
+                                photos, ensured print quality, and organized the
+                                editorial workflow.
+                            </p>
+
+                            <p class="ru">
+                                Художественный руководитель журнала "Карьерист".
+                                Разрабатывал концепцию и оформление издания,
+                                отвечал за верстку, работу с иллюстрациями и
+                                фотографиями, качество печати и организацию
+                                работы редакционной команды.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">Web Designer</h3>
+                                <h3 class="job-title ru">Web Дизайнер</h3>
+                                <div class="time">2007 - 2010</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                "LIS International Design.", Irvin, USA
+                            </div>
+                            <div class="company ru">
+                                "LIS International Design.", Ирвин, США
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                I completed orders for website design and
+                                corporate identity development for various
+                                companies that were clients of LIS International
+                                Design.
+                            </p>
+                            <p class="ru">
+                                Я выполнял заказы на разработку дизайна сайтов и
+                                создание фирменного стиля для различных компаний
+                                — клиентов LIS International Design.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">Designer</h3>
+                                <h3 class="job-title ru">Дизайнер</h3>
+                                <div class="time">2007</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                "BAS Programme (EBRD)", Tashkent
+                            </div>
+                            <div class="company ru">
+                                "BAS Programme (EBRD)", Ташкент
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                I was responsible for the design and layout of
+                                the project's email newsletters, as well as the
+                                design and formatting of monthly reports.
+                            </p>
+                            <p class="ru">
+                                Я выполнял дизайн и верстку e-mail рассылок для
+                                проекта, а также дизайн и верстку ежемесячных
+                                отчетов.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">Designer</h3>
+                                <h3 class="job-title ru">Дизайнер</h3>
+                                <div class="time">2002 - 2005</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                "NCI Projects Inc.", Tashkent
+                            </div>
+                            <div class="company ru">
+                                "NCI Projects Inc.", Ташкент
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                I worked on the creation of a corporate website
+                                and was responsible for its support and
+                                promotion (including banners, screensavers, and
+                                wallpapers). I also handled office design tasks
+                                such as booklets, folders, pens, and notepads.
+                                Additionally, I contributed to the design of an
+                                advertising platform for the Kitel 2002
+                                exhibition in Kazakhstan, and participated in
+                                the development of an electronic Russian
+                                language textbook (for elementary school
+                                students) for the Ministry of Public Education
+                                of Uzbekistan. I was also involved in developing
+                                the corporate identity for the company "Soft
+                                Engineer" (Kazakhstan).
+                            </p>
+                            <p class="ru">
+                                Работал над созданием корпоративного сайта,
+                                занимался его поддержкой и продвижением
+                                (баннеры, заставки, обои). Также выполнял
+                                офисные дизайн-задачи: буклеты, папки, ручки,
+                                блокноты. Работал над оформлением рекламной
+                                платформы на выставке Kitel 2002 (Казахстан),
+                                участвовал в разработке электронного учебника по
+                                русскому языку (для начальных классов) для
+                                Министерства народного образования Узбекистана.
+                                Также занимался разработкой фирменного стиля
+                                компании «Soft Engineer» (Казахстан).
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">
+                                    Designer and Flash Maker
+                                </h3>
+                                <h3 class="job-title ru">
+                                    Дизайнер и Флеш разработчик
+                                </h3>
+                                <div class="time">2003</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                "MFD-InfoCenter.", Moscow
+                            </div>
+                            <div class="company ru">
+                                "MFD-InfoCenter.", Москва
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                I completed orders for the production of banners
+                                for online advertising campaigns. I also
+                                developed and prepared office design elements
+                                for print.
+                            </p>
+                            <p class="ru">
+                                Я выполнял заказы на производство баннеров для
+                                онлайн-рекламных кампаний. Также разрабатывал и
+                                готовил к печати элементы офисного дизайна.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">
+                                    Designer and Art director
+                                </h3>
+                                <h3 class="job-title ru">
+                                    Дизайнер и Арт директор
+                                </h3>
+                                <div class="time">1999 - 2008</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">
+                                Center for Economic Research.<br />(UNDP project
+                                "Social and Economic Development of
+                                Uzbekistan"), Tashkent
+                            </div>
+                            <div class="company ru">
+                                Центр Экономических Исследований.<br />(Проект
+                                UNDP "Социальное и экономическое развитие
+                                Узбекистана"), Ташкент
+                            </div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                I worked at "Economic Review" magazine,
+                                published by the Center, where I headed the
+                                publications department. My responsibilities
+                                included layout, design, production of
+                                advertising materials, retouching, and photo
+                                preparation for print. I was responsible for all
+                                technical and artistic processes within the
+                                magazine's editorial office.
+                            </p>
+                            <p class="ru">
+                                Я работал в журнале «Economic Review»,
+                                издаваемом Центром, где возглавлял отдел
+                                публикаций. В мои обязанности входили верстка,
+                                дизайн, создание рекламных материалов, ретушь и
+                                подготовка фотографий к печати. Я отвечал за все
+                                технические и художественные процессы внутри
+                                редакции журнала.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title en">
+                                    Engineer and Project manager
+                                </h3>
+                                <h3 class="job-title ru">
+                                    Инженер and Менеджер проектов
+                                </h3>
+                                <div class="time">1996 - 1998</div>
+                            </div>
+                            <!--//upper-row-->
+                            <div class="company en">OOO "Olsoft", Tashkent</div>
+                            <div class="company ru">OOO "Олсофт", Ташкент</div>
+                        </div>
+                        <!--//meta-->
+                        <div class="details">
+                            <p class="en">
+                                I worked as a project manager in the field of
+                                computer network technologies and led a team
+                                responsible for developing websites and
+                                producing original advertising materials for the
+                                company's clients.
+                            </p>
+                            <p class="ru">
+                                Я работал руководителем проектов в области
+                                компьютерных сетевых технологий, а также
+                                возглавлял группу, занимавшуюся разработкой
+                                веб-сайтов и созданием оригинальных рекламных
+                                материалов для клиентов компании.
+                            </p>
+                        </div>
+                        <!--//details-->
+                    </div>
+                    <!--//item-->
+                </section>
+                <!--//section-->
+
+                <!-- <section class="section projects-section">
                     <h2 class="section-title en">
                         <span class="icon-holder"
                             ><i class="fas fa-apple-alt"></i></span
@@ -281,8 +752,8 @@
                             сделал за последние три года.
                         </p>
                     </div>
-                    <!--//intro-->
-                    <div class="item">
+
+					<div class="item">
                         <span class="project-title"
                             ><a
                                 href="https://github.com/GrafSoul/webrtc-video-chat"
@@ -298,8 +769,8 @@
                             >Простой пример использования технологии WebRTC для
                             создания Видео-чата.</span
                         >
-                    </div>
-                    <!--//item-->
+						</div>
+
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -316,8 +787,8 @@
                             >Пример приложения для совместного рисования и
                             общения.</span
                         >
-                    </div>
-                    <!--//item-->
+						</div>
+
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -334,9 +805,9 @@
                             >Приложение для синтеза речи (React.js и Speech
                             Synthesis API).</span
                         >
-                    </div>
-                    <!--//item-->
-                    <div class="item">
+					</div>
+
+					<div class="item">
                         <span class="project-title"
                             ><a
                                 href="https://github.com/GrafSoul/react-speech-to-text"
@@ -352,8 +823,8 @@
                             >Приложение для преобразования речи в текст
                             (React.js и Web Speech API).</span
                         >
-                    </div>
-                    <!--//item-->
+						</div>
+
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -371,9 +842,9 @@
                             >Пример построения чата (React.js и
                             Socket.io).</span
                         >
-                    </div>
-                    <!--//item-->
-                    <div class="item">
+					</div>
+
+					<div class="item">
                         <span class="project-title"
                             ><a
                                 href="https://github.com/GrafSoul/IntoPoint"
@@ -390,12 +861,12 @@
                             >Приложение для хранения ссылок на сайты, заметок,
                             кода и RSS новостей.</span
                         >
-                    </div>
-                    <!--//item-->
-                </section>
+						</div>
+                
+                </section> -->
                 <!--//section-->
 
-                <section class="section projects-section">
+                <!-- <section class="section projects-section">
                     <h2 class="section-title en">
                         <span class="icon-holder"
                             ><i class="fas fa-apple-alt"></i></span
@@ -415,8 +886,8 @@
                             Ниже приведен список приложений для Windows OS, я
                             сделал их за последние три года.
                         </p>
-                    </div>
-                    <!--//intro-->
+						</div>
+
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -433,9 +904,9 @@
                             >Приложения для прослушивания радиостанций и записи
                             вещания.</span
                         >
-                    </div>
-                    <!--//item-->
-                    <div class="item">
+					</div>
+
+					<div class="item">
                         <span class="project-title"
                             ><a
                                 href="https://github.com/GrafSoul/media-recorder"
@@ -450,8 +921,8 @@
                             >Приложение для записи видео и аудио с
                             веб-камеры.</span
                         >
-                    </div>
-                    <!--//item-->
+						</div>
+                  
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -468,8 +939,8 @@
                             >Оболочка для использования различных аудио и видео
                             сервисов.</span
                         >
-                    </div>
-                    <!--//item-->
+						</div>
+                   
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -486,9 +957,9 @@
                             >Приложение Voice Clock для голосового уведомления о
                             текущем времени.</span
                         >
-                    </div>
-                    <!--//item-->
-                    <div class="item">
+					</div>
+
+					<div class="item">
                         <span class="project-title"
                             ><a
                                 href="https://github.com/GrafSoul/talker"
@@ -504,8 +975,8 @@
                             >Приложения для чтения текста с помощью голосового
                             движка.</span
                         >
-                    </div>
-                    <!--//item-->
+						</div>
+                   
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -520,12 +991,11 @@
                         ><span class="project-tagline ru"
                             >Простое приложение для работы со временем.</span
                         >
-                    </div>
-                    <!--//item-->
-                </section>
-                <!--//section-->
+						</div>
 
-                <section class="section projects-section">
+                </section> -->
+
+                <!-- <section class="section projects-section">
                     <h2 class="section-title en">
                         <span class="icon-holder"
                             ><i class="fas fa-apple-alt"></i></span
@@ -536,7 +1006,7 @@
                             ><i class="fas fa-apple-alt"></i></span
                         >Проекты приложений для Chrome
                     </h2>
-                    <!--//intro-->
+                   
                     <div class="item">
                         <span class="project-title"
                             ><a
@@ -551,9 +1021,8 @@
                         ><span class="project-tagline ru"
                             >Приложение для преобразования голоса в текст.</span
                         >
-                    </div>
-                </section>
-                <!--//section-->
+					</div>
+                </section> -->
 
                 <section class="skills-section section">
                     <h2 class="section-title en">
@@ -680,20 +1149,6 @@
                                         >BEM</a
                                     ></span
                                 >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://gulpjs.com/"
-                                        target="_blank"
-                                        >Gulp</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://gruntjs.com/"
-                                        target="_blank"
-                                        >Grunt</a
-                                    ></span
-                                >
                             </div>
                         </div>
                         <!--//item-->
@@ -717,6 +1172,13 @@
                                         href="https://getbootstrap.com/"
                                         target="_blank"
                                         >Bootstrap</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://tailwindcss.com/"
+                                        target="_blank"
+                                        >Tailwind CSS</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -767,6 +1229,13 @@
                                         href="https://developer.mozilla.org/ru/docs/Web/JavaScript"
                                         target="_blank"
                                         >JavaScript</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://www.dartlang.org/"
+                                        target="_blank"
+                                        >Dart</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -825,6 +1294,11 @@
                                         >Yarn</a
                                     ></span
                                 >
+                                <span class="badge badge-secondary"
+                                    ><a href="https://pnpm.io/" target="_blank"
+                                        >PNPM</a
+                                    ></span
+                                >
                             </div>
                         </div>
                         <!--//item-->
@@ -847,6 +1321,11 @@
                                 ></div>
                             </div>
                             <div class="skills">
+                                <span class="badge badge-secondary"
+                                    ><a href="https://vite.dev/" target="_blank"
+                                        >Vite</a
+                                    ></span
+                                >
                                 <span class="badge badge-secondary"
                                     ><a
                                         href="https://webpack.js.org/"
@@ -953,6 +1432,20 @@
                                         >GitHub</a
                                     ></span
                                 >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://gitlab.com/"
+                                        target="_blank"
+                                        >GitLab</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://bitbucket.org/"
+                                        target="_blank"
+                                        >Bitbucket</a
+                                    ></span
+                                >
                             </div>
                         </div>
                         <!--//item-->
@@ -979,6 +1472,20 @@
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
+                                        href="https://nextjs.org/"
+                                        target="_blank"
+                                        >NextJS</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://www.gatsbyjs.org/"
+                                        target="_blank"
+                                        >GatsbyJS</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
                                         href="https://reacttraining.com/react-router/"
                                         target="_blank"
                                         >React Router</a
@@ -993,9 +1500,23 @@
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
+                                        href="https://github.com/reduxjs/redux-toolkit"
+                                        target="_blank"
+                                        >Redux Toolkit</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
                                         href="https://github.com/reduxjs/redux-thunk/"
                                         target="_blank"
                                         >Redux Thunk</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://tanstack.com/query/latest"
+                                        target="_blank"
+                                        >TanStack Query</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -1047,32 +1568,19 @@
                                         >Express</a
                                     ></span
                                 >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://nextjs.org/"
-                                        target="_blank"
-                                        >NextJS</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://www.gatsbyjs.org/"
-                                        target="_blank"
-                                        >GatsbyJS</a
-                                    ></span
-                                >
                             </div>
                         </div>
                         <!--//item-->
 
                         <div class="item">
-                            <h3 class="level-title">VueJS</h3>
+                            <h3 class="level-title en">WebXR</h3>
+                            <h3 class="level-title ru">WebXR</h3>
                             <div class="progress level-bar">
                                 <div
                                     class="progress-bar theme-progress-bar"
                                     role="progressbar"
-                                    style="width: 60%"
-                                    aria-valuenow="60"
+                                    style="width: 70%"
+                                    aria-valuenow="70"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
                                 ></div>
@@ -1080,37 +1588,58 @@
                             <div class="skills">
                                 <span class="badge badge-secondary"
                                     ><a
-                                        href="https://vuejs.org/"
+                                        href="https://threejs.org/"
                                         target="_blank"
-                                        >VueJS</a
+                                        >Three.js</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
-                                        href="https://router.vuejs.org/"
+                                        href="https://aframe.io/"
                                         target="_blank"
-                                        >Vue Router</a
+                                        >A-Frame</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
-                                        href="https://vuex.vuejs.org/"
+                                        href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
                                         target="_blank"
-                                        >Vuex</a
+                                        >React Three Fiber</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
-                                        href="https://ssr.vuejs.org/"
+                                        href="https://8thwall.com/"
                                         target="_blank"
-                                        >Vue SSR</a
+                                        >Niantic 8th Wall</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
-                                        href="https://ru.nuxtjs.org/"
+                                        href="https://lensstudio.snapchat.com/"
                                         target="_blank"
-                                        >NuxtJS</a
+                                        >Snapchat Lens Studio</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://geenee.com/"
+                                        target="_blank"
+                                        >Geenee</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://engineee.com/"
+                                        target="_blank"
+                                        >Engineee</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://mindar.io/"
+                                        target="_blank"
+                                        >MindAR</a
                                     ></span
                                 >
                             </div>
@@ -1184,14 +1713,9 @@
                             <div class="skills">
                                 <span class="badge badge-secondary"
                                     ><a
-                                        href="https://developer.android.com/studio"
+                                        href="https://flutter.dev/"
                                         target="_blank"
-                                        >Android Studio</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a href="https://expo.io/" target="_blank"
-                                        >Expo</a
+                                        >Flutter</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -1202,10 +1726,8 @@
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://reactnavigation.org/"
-                                        target="_blank"
-                                        >React Navigation</a
+                                    ><a href="https://expo.io/" target="_blank"
+                                        >Expo</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -1255,9 +1777,23 @@
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
+                                        href="https://react-testing-library.com/"
+                                        target="_blank"
+                                        >React Testing Library</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
                                         href="https://www.postman.com/"
                                         target="_blank"
                                         >Postman</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://insomnia.rest/"
+                                        target="_blank"
+                                        >Insomnia</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -1322,6 +1858,20 @@
                                 >
                                 <span class="badge badge-secondary"
                                     ><a
+                                        href="https://cursor.sh/"
+                                        target="_blank"
+                                        >Cursor</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://windsurf.com/editor"
+                                        target="_blank"
+                                        >Windsurf</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
                                         href="https://www.jetbrains.com/ru-ru/webstorm/"
                                         target="_blank"
                                         >Jetbrains WebStorm</a
@@ -1332,25 +1882,6 @@
                                         href="https://www.sublimetext.com/"
                                         target="_blank"
                                         >Sublime Text</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://www.adobe.com/ru/products/dreamweaver.html"
-                                        target="_blank"
-                                        >Adobe Dreamweaver</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a href="https://atom.io/" target="_blank"
-                                        >Atom</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="http://brackets.io/"
-                                        target="_blank"
-                                        >Brackets</a
                                     ></span
                                 >
                             </div>
@@ -1378,6 +1909,13 @@
                                         href="https://www.adobe.com/products/photoshop.html"
                                         target="_blank"
                                         >Adobe Photoshop</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://www.gimp.org/"
+                                        target="_blank"
+                                        >Gimp</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -1435,6 +1973,13 @@
                             <div class="skills">
                                 <span class="badge badge-secondary"
                                     ><a
+                                        href="https://www.figma.com/"
+                                        target="_blank"
+                                        >Figma</a
+                                    ></span
+                                >
+                                <span class="badge badge-secondary"
+                                    ><a
                                         href="https://www.adobe.com/products/xd.html"
                                         target="_blank"
                                         >Adobe XD</a
@@ -1445,13 +1990,6 @@
                                         href="https://avocode.com/"
                                         target="_blank"
                                         >Avocode</a
-                                    ></span
-                                >
-                                <span class="badge badge-secondary"
-                                    ><a
-                                        href="https://www.figma.com/"
-                                        target="_blank"
-                                        >Figma</a
                                     ></span
                                 >
                                 <span class="badge badge-secondary"
@@ -1495,13 +2033,20 @@
                                 <div
                                     class="progress-bar theme-progress-bar"
                                     role="progressbar"
-                                    style="width: 70%"
-                                    aria-valuenow="70"
+                                    style="width: 50%"
+                                    aria-valuenow="50"
                                     aria-valuemin="0"
                                     aria-valuemax="100"
                                 ></div>
                             </div>
                             <div class="skills">
+                                <span class="badge badge-secondary"
+                                    ><a
+                                        href="https://www.blender.org/"
+                                        target="_blank"
+                                        >Blender</a
+                                    ></span
+                                >
                                 <span class="badge badge-secondary"
                                     ><a
                                         href="https://www.autodesk.ru/products/3ds-max/overview"
@@ -1522,427 +2067,6 @@
                     </div>
                 </section>
                 <!--//skills-section-->
-
-                <section class="section experiences-section">
-                    <h2 class="section-title en">
-                        <span class="icon-holder"
-                            ><i class="fas fa-briefcase"></i></span
-                        >Experiences
-                    </h2>
-                    <h2 class="section-title ru">
-                        <span class="icon-holder"
-                            ><i class="fas fa-briefcase"></i></span
-                        >Опыт
-                    </h2>
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">
-                                    Front End Developer,<br />UI/UX Designer,<br />HTML
-                                    Layout maker
-                                </h3>
-                                <div class="time en">2011 - Present time</div>
-                                <div class="time ru">
-                                    2011 - Настоящее время
-                                </div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">Freelancer</div>
-                            <div class="company ru">Фрилансер</div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I design interfaces for web services, design
-                                corporate websites, landing pages for services
-                                and products, and online stores. I create SPA
-                                applications on ReactJS and VueJS.
-                            </p>
-                            <p class="ru">
-                                Разрабатываю интерфейсы для веб-сервисов, создаю
-                                корпоративные сайты, интернет-магазины, целевые
-                                страницы для сервисов и продуктов. Делаю
-                                SPA-приложения на ReactJS и Vue JS.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">Designer</h3>
-                                <h3 class="job-title ru">Дизайнер</h3>
-                                <div class="time">2010 - 2011</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                "SM-Alliance", Tashkent
-                            </div>
-                            <div class="company ru">"SM-Alliance", Ташкент</div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                Performed work on the promotion of LG and AOC
-                                products on the market. As a designer, I worked
-                                on the development of advertising campaigns,
-                                signage, stands for retail outlets, as well as
-                                the design of stores. I was preparing for the
-                                printing of advertising layouts for printing in
-                                the media, as well as outdoor advertising placed
-                                on advertising structures in the city. I was
-                                engaged in the production of flash banners to
-                                inform about promotions and new products via the
-                                Internet.
-                            </p>
-                            <p class="ru">
-                                Выполнял работу по продвижению продукции LG и
-                                AOC на рынок. Будучи дизайнером, я занимался
-                                разработкой рекламных кампаний, вывесок, стендов
-                                для торговых точек, а также дизайном магазинов.
-                                Я готовил к печати рекламные макеты для печати в
-                                СМИ, а также наружную рекламу, размещаемую на
-                                рекламных конструкциях в городе. Занимался
-                                изготовлением флеш баннеров для информирования
-                                об акциях и новинках через интернет.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">Art director</h3>
-                                <h3 class="job-title ru">Арт-директор</h3>
-                                <div class="time">2009</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">"DiPLUS", Tashkent</div>
-                            <div class="company ru">"DiPLUS", Ташкент</div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                The main responsibilities were the development
-                                of a new design of the newspaper and its
-                                implementation, layout design, design of
-                                articles, preparation of photos and
-                                illustrations for printing in offset printing,
-                                work with printing houses, print quality
-                                control, organization of work with
-                                photographers, providing technical support. I
-                                was responsible for all the technical and
-                                artistic processes inside the newspaper's
-                                editorial office.
-                            </p>
-
-                            <p class="ru">
-                                Основными обязанностями были разработка нового
-                                дизайна газеты и его реализация, верстка,
-                                оформление статей, подготовка фотографий и
-                                иллюстраций к печати, работа с типографиями,
-                                контроль качества печати, организация работы с
-                                фотографами, оказание технической поддержки. Я
-                                отвечал за все технические и художественные
-                                процессы в редакции газеты.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">Art director</h3>
-                                <h3 class="job-title ru">Арт-директор</h3>
-                                <div class="time">2008 - 2009</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                "Career Press" , Tashkent
-                            </div>
-                            <div class="company ru">
-                                "Career Press" , Ташкент
-                            </div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I worked in the magazine "Careerist" as an art
-                                director. The main responsibilities were the
-                                development and implementation of the main
-                                concept of the magazine, layout design, design
-                                of articles, preparation of photos and
-                                illustrations for printing in offset printing,
-                                work with printing houses, print quality
-                                control, organization of work with the
-                                magazine's photographers, providing technical
-                                support for the publication. I was responsible
-                                for all the technical and artistic processes
-                                inside the magazine's editorial office.
-                            </p>
-
-                            <p class="ru">
-                                Работал в журнале "Карьерист" художественным
-                                руководителем. Основными обязанностями были
-                                разработка и реализация основной концепции
-                                журнала, верстка, оформление статей, подготовка
-                                фотографий и иллюстраций к печати, работа с
-                                типографиями, контроль качества печати,
-                                организация работы с фотографами журнала,
-                                обеспечение технической поддержки издания. Я
-                                отвечал за все технические и художественные
-                                процессы в редакции журнала.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">Web Designer</h3>
-                                <h3 class="job-title ru">Web Дизайнер</h3>
-                                <div class="time">2007 - 2010</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                "LIS International Design.", Irvin, USA
-                            </div>
-                            <div class="company ru">
-                                "LIS International Design.", Ирвин, США
-                            </div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I have carried out orders for the development of
-                                website design, as well as corporate identity
-                                for various companies that are clients of LIS
-                                International Design.
-                            </p>
-                            <p class="ru">
-                                Я выполнял заказы на разработку дизайна сайтов,
-                                а также фирменного стиля для различных компаний,
-                                являющихся клиентами LIS International Design.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">Designer</h3>
-                                <h3 class="job-title ru">Дизайнер</h3>
-                                <div class="time">2007</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                "BAS Programme (EBRD)", Tashkent
-                            </div>
-                            <div class="company ru">
-                                "BAS Programme (EBRD)", Ташкент
-                            </div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I was performed the design and layout of the
-                                project's mailing for e-mail, as well as the
-                                design and layout of monthly reports.
-                            </p>
-                            <p class="ru">
-                                Выполнял дизайн и верстку рассылок проекта для
-                                электронной почты, а также дизайн и верстку
-                                ежемесячных отчетов.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">Designer</h3>
-                                <h3 class="job-title ru">Дизайнер</h3>
-                                <div class="time">2002 - 2005</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                "NCI Projects Inc.", Tashkent
-                            </div>
-                            <div class="company ru">
-                                "NCI Projects Inc.", Ташкент
-                            </div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I was worked on the creation of a corporate
-                                website and its support and promotion (banners,
-                                screensavers, wallpapers). I also did office
-                                design work (booklets, folders, pens, notepads).
-                                I worked on the design of the advertising
-                                platform at the Kitel 2002 exhibition (in
-                                Kazakhstan), participated in the development of
-                                an electronic textbook on the Russian language
-                                (junior classes) for the Ministry of Public
-                                Education of Uzbekistan. He was engaged in the
-                                development of the corporate identity of the
-                                company "Soft Engineer" (Kazakhstan.).
-                            </p>
-                            <p class="ru">
-                                Работал над созданием корпоративного сайта и
-                                занимался его поддержкой и продвижением
-                                (баннеры, заставки, обои). Tак же занимался
-                                офисным дизайном (буклеты, папки, ручки,
-                                блокноты). Работал над дизайном рекламной
-                                площадки на выставке "Китель 2002" (в
-                                Казахстане), участвовал в разработке
-                                электронного учебника по русскому языку (для
-                                младших классов) для Министерства народного
-                                образования Узбекистана. Занимался разработкой
-                                фирменного стиля компании "Софт Инженер"
-                                (Казахстан).
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">
-                                    Designer and Flash Maker
-                                </h3>
-                                <h3 class="job-title ru">
-                                    Дизайнер и Флеш разработчик
-                                </h3>
-                                <div class="time">2003</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                "MFD-InfoCenter.", Moscow
-                            </div>
-                            <div class="company ru">
-                                "MFD-InfoCenter.", Москва
-                            </div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I carried out orders for the production of
-                                banners for online advertising campaigns.
-                                Developed and prepared to print the elements of
-                                the office design.
-                            </p>
-                            <p class="ru">
-                                Выполнял заказы на изготовление баннеров для
-                                рекламных интернет кампаний. Разрабатывал и
-                                готовил к печати элементы офисного дизайна.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">
-                                    Designer and Art director
-                                </h3>
-                                <h3 class="job-title ru">
-                                    Дизайнер и Арт директор
-                                </h3>
-                                <div class="time">1999 - 2008</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">
-                                Center for Economic Research.<br />(UNDP project
-                                "Social and Economic Development of
-                                Uzbekistan"), Tashkent
-                            </div>
-                            <div class="company ru">
-                                Центр Экономических Исследований.<br />(Проект
-                                UNDP "Социальное и экономическое развитие
-                                Узбекистана"), Ташкент
-                            </div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I worked in the magazine "Economic Review",
-                                published by the Center, headed the department
-                                of publications, also performing work on layout,
-                                design, production of advertising original
-                                layouts, retouching and preparing photos for
-                                printing. I was responsible for all the
-                                technical and artistic processes inside the
-                                magazine's editorial office.
-                            </p>
-                            <p class="ru">
-                                Работал в журнале "Экономическое обозрение",
-                                издаваемом Центром, заведовал отделом
-                                публикаций, также выполнял работы по верстке,
-                                дизайну, изготовлению рекламных оригинальных
-                                макетов, ретуши и подготовке фотографий к
-                                печати. Я отвечал за все технические и
-                                художественные процессы в редакции журнала.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title en">
-                                    Engineer and Project manager
-                                </h3>
-                                <h3 class="job-title ru">
-                                    Инженер and Менеджер проектов
-                                </h3>
-                                <div class="time">1996 - 1998</div>
-                            </div>
-                            <!--//upper-row-->
-                            <div class="company en">OOO "Olsoft", Tashkent</div>
-                            <div class="company ru">OOO "Олсофт", Ташкент</div>
-                        </div>
-                        <!--//meta-->
-                        <div class="details">
-                            <p class="en">
-                                I worked as a project manager in the field of
-                                computer network technologies, and also led a
-                                group engaged in the development of web sites
-                                and the production of advertising original
-                                layouts for the company's clients.
-                            </p>
-                            <p class="ru">
-                                Я работал менеджером проектов в области
-                                компьютерных сетевых технологий, а также
-                                возглавлял группу, занимающуюся разработкой
-                                веб-сайтов и изготовлением рекламных
-                                оригинальных макетов для клиентов компании.
-                            </p>
-                        </div>
-                        <!--//details-->
-                    </div>
-                    <!--//item-->
-                </section>
-                <!--//section-->
 
                 <section class="section projects-section certificates">
                     <h2 class="section-title en">
@@ -2028,6 +2152,33 @@
                             >4.) Certificate - Fundamentals of database.</span
                         >
                     </div>
+
+                    <div class="intro">
+                        <h6>Udemy</h6>
+                    </div>
+                    <div class="item">
+                        <span class="project-tagline"
+                            >1.) Certificate - React Three Fiber.</span
+                        >
+                    </div>
+                    <div class="item">
+                        <span class="project-tagline"
+                            >2.) Certificate - Blender 2023. Complete Beginner's
+                            Course in 3D Modeling.</span
+                        >
+                    </div>
+                    <div class="item">
+                        <span class="project-tagline"
+                            >3.) Certificate - Testing JavaScript and React
+                            Applications.</span
+                        >
+                    </div>
+                    <div class="item">
+                        <span class="project-tagline"
+                            >4.) Certificate - Learn to create WebXR, VR and AR
+                            experiences using Three.js .</span
+                        >
+                    </div>
                     <!--//item-->
                 </section>
                 <!--//section-->
@@ -2037,8 +2188,12 @@
 
         <!--//footer-->
         <footer class="footer">
-            <small class="copyright en">© 2021 | Dmitriy Zatulovskiy</small>
-            <small class="copyright ru">© 2021 | Дмитрий Затуловский</small>
+            <small class="copyright en"
+                >© <span id="currentYear"></span> | Dmitriy Zatulovskiy</small
+            >
+            <small class="copyright ru"
+                >© <span id="currentYear2"></span> | Дмитрий Затуловский</small
+            >
         </footer>
         <!--//footer-->
     </body>

@@ -3,19 +3,33 @@
 ## Project Intelligence
 
 ### Critical Implementation Paths
+- Плавная загрузка страницы реализована с помощью встроенных критических стилей и JavaScript
+- Контент скрывается до полной загрузки стилей с помощью CSS и класса .ready, добавляемого через JavaScript
+- Год в футере автоматически обновляется с помощью JavaScript в main.js
+- SASS module system uses `@use` and `@forward` directives instead of deprecated `@import`
+- Color manipulation is done using the `sass:color` module with `color.adjust()` function
+- Variables are passed to modules using the `with` keyword and default values with `!default` flag
 - Language switching is implemented via toggling classes (.en and .ru) on content elements
 - Language selection state is maintained using active class on language selector buttons
 - The project uses a single HTML file structure with sections clearly demarcated
 - Styling follows a modular approach with section-specific styles
 
 ### User Preferences and Workflow
+- Избегать мигания неоформленного контента при загрузке страницы
+- Обеспечивать автоматическое обновление данных, не требующих ручного вмешательства (например, год)
 - Prefer clean, minimal code without unnecessary complexity
 - Maintain multilingual support as a core feature
 - Keep the professional, clean aesthetic consistent
 - Preserve the sidebar/main-content layout structure
 - Focus on content clarity and readability as top priorities
+- Use modern SASS module system practices
 
 ### Project-Specific Patterns
+- Встроенные критические стили в head для предотвращения FOUC (Flash of Unstyled Content)
+- JavaScript для контроля видимости и времени появления контента
+- Использование событий window.load для обеспечения полной загрузки ресурсов
+- SASS modules are organized by functionality (base, theme, responsive)
+- Mixins are forward-exported from their own module
 - Section headers follow a consistent format with icon + title
 - Project listings follow a consistent format with title, link, and description
 - Contact links are presented with appropriate icons from Font Awesome
@@ -23,6 +37,9 @@
 - Content is organized hierarchically with clear visual separation
 
 ### Known Challenges
+- Обеспечение быстрой и плавной загрузки сайта на различных устройствах и при разных скоростях соединения
+- Ensuring all `@use` directives come before other rules in SASS files
+- Maintaining proper namespacing when using SASS modules
 - Balancing comprehensive information with clean design
 - Keeping content current across multiple languages
 - Ensuring responsive behavior works well across all device sizes
@@ -30,14 +47,18 @@
 - Maintaining optimal performance with image assets
 
 ### Evolution of Project Decisions
-- Migrated from simpler build tools to Vite.js for improved development experience
+- Добавлена плавная загрузка страницы для улучшения первого впечатления пользователей
+- Реализовано автоматическое обновление года в футере для устранения ручного обновления
+- Updated SASS implementation to use modern module system with `@use` and `@forward`
+- Migrated from Gulp to Vite.js for improved development experience
 - Enhanced multilingual support over time
 - Expanded project showcase sections as new work was completed
 - Refined visual design to maintain modern appearance
 
 ### Tool Usage Patterns
-- Use Vite.js for all build processes
-- SASS for styling with clear organization
+- Use Vite.js for all build processes with appropriate plugins
+- Configure build output to the `docs` directory for GitHub Pages compatibility
+- SASS for styling with modern module system and clear organization
 - Minimize external dependencies to keep the site lightweight
 - Employ image optimization plugins to maintain performance
 - Leverage GitHub Pages for hassle-free hosting
@@ -45,10 +66,15 @@
 ## File Organization
 - HTML structure follows a logical flow from profile to skills to projects
 - Assets are organized by type (images, styles, scripts)
-- Build output is directed to the build directory
+- Критические стили встроены в head для быстрой первоначальной отрисовки
+- SASS files follow a modular structure with clear separation of concerns
+- JavaScript функциональность находится в отдельных JS файлах, не встроена в HTML
+- Build output is directed to the docs directory for GitHub Pages
 - Configuration files are kept at the project root
 
 ## Styling Conventions
+- Использовать встроенные критические стили для предотвращения FOUC
+- Use modern SASS module system with proper namespacing
 - Use class-based styling rather than IDs
 - Follow BEM-like naming conventions where appropriate
 - Maintain consistent spacing and indentation
@@ -56,8 +82,10 @@
 - Use variables for repeated values like colors and spacing
 
 ## JavaScript Practices
+- Избегать встраивания скриптов в HTML, размещать их в отдельных файлах
+- Использовать событие DOMContentLoaded для основного кода и load для функций, требующих полной загрузки ресурсов
+- jQuery is used for DOM manipulation and language switching
 - Keep scripts minimal and focused on specific functionality
-- Avoid jQuery or other large libraries for simple tasks
 - Ensure scripts are non-blocking for page rendering
 - Document any complex logic with comments
 
@@ -66,5 +94,18 @@
 - Ensure all content is available in both languages
 - Maintain PDF resume versions in sync with website content
 - Keep all external links current and functioning
+
+## Build Process
+- Run `yarn dev` for local development
+- Run `yarn build` to generate production files in the docs directory
+- Run `yarn preview` to preview the production build locally
+- Commit and push changes to deploy to GitHub Pages
+
+## Performance Optimization
+- Используйте встроенные критические стили для быстрой первоначальной отрисовки
+- Скрывайте контент до полной загрузки стилей для предотвращения FOUC
+- Оптимизируйте изображения для быстрой загрузки
+- Минимизируйте количество HTTP-запросов
+- Используйте кэширование где это возможно
 
 This document serves as a guide for maintaining and extending the portfolio website while respecting its established patterns and conventions. 

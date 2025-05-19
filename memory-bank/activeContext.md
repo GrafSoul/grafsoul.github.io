@@ -1,55 +1,69 @@
 # Active Context - Dmitriy Zatulovskiy's Portfolio Website
 
 ## Current Work Focus
-The current focus is on initializing and documenting the project structure in the memory bank. This involves creating a comprehensive understanding of the portfolio website's architecture, design patterns, and technical implementation to facilitate future development and maintenance.
+Текущая работа сосредоточена на улучшении пользовательского опыта и оптимизации процесса загрузки сайта. Мы добавили плавную загрузку страницы, чтобы избежать отображения неоформленного HTML пользователю, и реализовали автоматическую подстановку текущего года в футере. Эти улучшения направлены на создание более профессионального и приятного взаимодействия с сайтом.
 
 ## Recent Changes
-- Created the memory bank structure with all required core files:
-  - `projectbrief.md`: Defined core requirements and goals
-  - `productContext.md`: Outlined why the project exists and problems it solves
-  - `systemPatterns.md`: Documented system architecture and design patterns
-  - `techContext.md`: Detailed technologies used and development setup
-  - `activeContext.md`: Tracking current work focus (this file)
-  - `progress.md`: Documenting project progress and status
+- Реализовано плавное появление страницы после полной загрузки стилей:
+  - Добавлены критические стили для предотвращения мигания неоформленного контента
+  - Контент скрывается до полной загрузки всех ресурсов, а затем плавно отображается
+  - Добавлена базовая предварительная стилизация для корректного отображения
+- Добавлено автоматическое обновление года в футере:
+  - Реализовано с использованием JavaScript в main.js
+  - Обеспечивает актуальность копирайта без необходимости ручного обновления
+- Ранее были исправлены ошибки компиляции SASS:
+  - Скорректирован порядок директив `@use`, `@forward` и `@import` в main.scss
+  - Правильно реализована система модулей SASS с `@use` и пространствами имен
+  - Обновлены функции работы с цветом до современного метода `color.adjust()`
 
 ## Next Steps
-1. **Current website analysis**:
-   - Further analyze the current implementation to identify potential areas for improvement
-   - Review responsive behavior across different device sizes
-   - Check for accessibility issues
+1. **Дальнейшая оптимизация загрузки**:
+   - Рассмотреть возможность предварительной загрузки ключевых ресурсов (preload/prefetch)
+   - Оптимизировать размер шрифтов и порядок их загрузки
+   - Исследовать возможность добавления анимации загрузки при длительных операциях
 
-2. **Performance optimization**:
-   - Audit current site performance using tools like Lighthouse
-   - Identify opportunities for further image optimization
-   - Review JavaScript for potential performance improvements
+2. **Проверка кроссбраузерной совместимости**:
+   - Протестировать сайт в различных браузерах для обеспечения правильной функциональности
+   - Проверить, что механизм плавной загрузки работает во всех поддерживаемых браузерах
+   - Убедиться, что переключение языка работает стабильно
 
-3. **Content updates**:
-   - Review and update project listings with the most recent work
-   - Ensure all links are current and working
-   - Update career information if needed
+3. **Оптимизация производительности**:
+   - Провести аудит текущей производительности сайта с помощью инструментов типа Lighthouse
+   - Выявить возможности для дальнейшей оптимизации изображений
+   - Проанализировать JavaScript на предмет потенциальных улучшений производительности
 
-4. **Technical improvements**:
-   - Consider implementing a more robust language switching mechanism
-   - Evaluate the potential for adding animations or transitions for better UX
-   - Review and update dependencies to their latest stable versions
+4. **Обновление контента**:
+   - Просмотреть и обновить списки проектов, добавив самые последние работы
+   - Убедиться, что все ссылки актуальны и работают
+   - Обновить информацию о карьере при необходимости
 
-5. **Documentation**:
-   - Complete documentation of the codebase
-   - Create guidelines for future content updates
+5. **Технические улучшения**:
+   - Рассмотреть возможность внедрения более надежного механизма переключения языков
+   - Оценить потенциал добавления анимаций и переходов для улучшения UX
+   - Пересмотреть и обновить зависимости до их последних стабильных версий
 
 ## Active Decisions and Considerations
 
-### Current Design Approach
-The current design follows a traditional resume/CV layout with a sidebar containing personal information and a main content area for professional details. This approach is clear and familiar to users, but we should consider whether a more interactive or modern approach might better showcase Dmitriy's front-end development skills.
+### Плавная загрузка страницы
+Текущая реализация использует комбинацию встроенных критических стилей и JavaScript для контроля видимости страницы. HTML скрыт до полной загрузки всех стилей, что предотвращает "мигание неоформленного контента" (FOUC). Это решение обеспечивает более профессиональное впечатление от сайта для посетителей.
 
-### Multilingual Implementation
-The current implementation of multilingual support uses class toggling to show/hide content in different languages. While functional, we should consider whether a more scalable approach would be beneficial if additional languages need to be added in the future.
+### Автоматическое обновление года
+Год в футере теперь автоматически обновляется с помощью JavaScript, что устраняет необходимость ежегодного ручного обновления. Код размещен в основном файле main.js, что соответствует принципу разделения обязанностей и упрощает обслуживание кода.
 
-### Technology Stack
-The use of Vite.js with SASS provides a modern development experience. We should continue to leverage these technologies while exploring potential enhancements like:
-- Adding TypeScript for better code maintainability
-- Implementing a component-based approach for better modularity
-- Considering a lightweight framework if complexity increases
+### SASS Module System
+Проект использует современную систему модулей SASS с директивами `@use` и `@forward` вместо устаревшего `@import`. Этот подход обеспечивает лучшую инкапсуляцию и предотвращает загрязнение глобального пространства имен. Мы сохранили тот же визуальный результат, улучшив при этом организацию кода.
 
-### Deployment Strategy
-Currently using GitHub Pages for hosting. This approach is cost-effective and integrates well with the GitHub repository, but we should document the deployment process clearly for future updates. 
+### Текущий подход к дизайну
+Текущий дизайн следует традиционной компоновке резюме/CV с боковой панелью, содержащей личную информацию, и основной областью контента для профессиональных деталей. Этот подход понятен и знаком пользователям, но в будущем можно рассмотреть возможность более интерактивного или современного подхода, который лучше продемонстрирует навыки Дмитрия в области фронтенд-разработки.
+
+### Многоязычная реализация
+Текущая реализация многоязычной поддержки использует переключение классов для отображения/скрытия контента на разных языках. Хотя это функционально, мы можем рассмотреть вопрос о более масштабируемом подходе, если в будущем потребуется добавить дополнительные языки.
+
+### Технологический стек
+Использование Vite.js с SASS обеспечивает современный опыт разработки. Мы успешно мигрировали с Gulp на Vite и исправили связанные с этим проблемы сборки. Мы должны продолжать использовать эти технологии, исследуя потенциальные улучшения, такие как:
+- Добавление TypeScript для лучшей поддержки кода
+- Внедрение компонентного подхода для лучшей модульности
+- Рассмотрение легковесного фреймворка, если сложность увеличится
+
+### Стратегия развертывания
+В настоящее время используется GitHub Pages для хостинга. Этот подход экономичен и хорошо интегрируется с репозиторием GitHub, но мы должны четко документировать процесс развертывания для будущих обновлений. 
