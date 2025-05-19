@@ -5,6 +5,13 @@
 // Import styles
 import '../styles/main.scss';
 
+// Import PDF files
+import '../assets/pdf/dmitriy_zatulovskiy_cv_en.pdf';
+import '../assets/pdf/dmitriy_zatulovskiy_cv_ru.pdf';
+
+// No need to update PDF paths since we're keeping the original names
+// Just leaving the links as they are in the HTML
+
 // Функция для отображения страницы после загрузки стилей
 function showPage() {
     document.documentElement.classList.add('ready');

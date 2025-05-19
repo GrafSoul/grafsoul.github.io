@@ -35,6 +35,12 @@ export default defineConfig(() => {
                             )
                         ) {
                             return 'assets/fonts/[name].[hash][extname]';
+                        } else if (
+                            ['.pdf'].some((ext) =>
+                                assetInfo.name.endsWith(ext),
+                            )
+                        ) {
+                            return 'assets/pdf/[name][extname]';
                         } else {
                             return 'assets/[name].[hash][extname]';
                         }
