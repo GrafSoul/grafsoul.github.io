@@ -1,0 +1,70 @@
+# .cursorrules - Dmitriy Zatulovskiy's Portfolio Website
+
+## Project Intelligence
+
+### Critical Implementation Paths
+- Language switching is implemented via toggling classes (.en and .ru) on content elements
+- Language selection state is maintained using active class on language selector buttons
+- The project uses a single HTML file structure with sections clearly demarcated
+- Styling follows a modular approach with section-specific styles
+
+### User Preferences and Workflow
+- Prefer clean, minimal code without unnecessary complexity
+- Maintain multilingual support as a core feature
+- Keep the professional, clean aesthetic consistent
+- Preserve the sidebar/main-content layout structure
+- Focus on content clarity and readability as top priorities
+
+### Project-Specific Patterns
+- Section headers follow a consistent format with icon + title
+- Project listings follow a consistent format with title, link, and description
+- Contact links are presented with appropriate icons from Font Awesome
+- Skills are visualized with progress bars
+- Content is organized hierarchically with clear visual separation
+
+### Known Challenges
+- Balancing comprehensive information with clean design
+- Keeping content current across multiple languages
+- Ensuring responsive behavior works well across all device sizes
+- Managing PDF resume versions when content changes
+- Maintaining optimal performance with image assets
+
+### Evolution of Project Decisions
+- Migrated from simpler build tools to Vite.js for improved development experience
+- Enhanced multilingual support over time
+- Expanded project showcase sections as new work was completed
+- Refined visual design to maintain modern appearance
+
+### Tool Usage Patterns
+- Use Vite.js for all build processes
+- SASS for styling with clear organization
+- Minimize external dependencies to keep the site lightweight
+- Employ image optimization plugins to maintain performance
+- Leverage GitHub Pages for hassle-free hosting
+
+## File Organization
+- HTML structure follows a logical flow from profile to skills to projects
+- Assets are organized by type (images, styles, scripts)
+- Build output is directed to the build directory
+- Configuration files are kept at the project root
+
+## Styling Conventions
+- Use class-based styling rather than IDs
+- Follow BEM-like naming conventions where appropriate
+- Maintain consistent spacing and indentation
+- Group related styles together
+- Use variables for repeated values like colors and spacing
+
+## JavaScript Practices
+- Keep scripts minimal and focused on specific functionality
+- Avoid jQuery or other large libraries for simple tasks
+- Ensure scripts are non-blocking for page rendering
+- Document any complex logic with comments
+
+## Content Management
+- New projects should be added following the established format
+- Ensure all content is available in both languages
+- Maintain PDF resume versions in sync with website content
+- Keep all external links current and functioning
+
+This document serves as a guide for maintaining and extending the portfolio website while respecting its established patterns and conventions. 

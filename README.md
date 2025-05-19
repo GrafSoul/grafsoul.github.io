@@ -2,4 +2,4 @@
 
 Website with my resume and portfolio
 
-© 2021 | Resume and Portfolio
+© 2025 | Resume and Portfolio
