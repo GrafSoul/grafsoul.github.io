@@ -21,8 +21,8 @@ if (document.readyState === 'complete') {
 // Main functionality
 document.addEventListener('DOMContentLoaded', function () {
     // Ensure jQuery is loaded from the CDN in index.html
-    $('.en').show();
-    $('.russian').addClass('active');
+    $('.ru').show();
+    $('.english').addClass('active');
 
     $('.russian').click(function () {
         console.log('russian');

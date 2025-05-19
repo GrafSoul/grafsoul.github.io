@@ -38,10 +38,30 @@ $heart: #fb866a;
 }
 
 .lang-container {
-    position: absolute;
-    top: 10px;
+    position: fixed;
+    top: 50%;
     right: 10px;
-    z-index: 10;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+        width: 36px;
+        height: 34px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: rgb(38, 54, 61);
+        border-radius: 50%;
+        margin-bottom: 5px;
+        margin-right: 0;
+
+        &:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(83, 116, 131);
+        }
+    }
 }
 
 .russian.active,
