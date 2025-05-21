@@ -55,16 +55,16 @@ p {
     margin-top: 30px;
     position: relative;
     @include mix.box-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+    display: flex;
 }
 
 .sidebar-wrapper {
     background: $theme-color;
-    position: absolute;
-    left: 0;
+    position: relative;
+    flex: 0 0 240px;
     width: 240px;
-    height: 100%;
-    min-height: 800px;
     color: #fff;
+
     a {
         color: #fff;
     }
@@ -175,7 +175,7 @@ p {
 .main-wrapper {
     background: #fff;
     padding: 60px;
-    padding-left: 300px;
+    flex: 1;
     .section-title {
         text-transform: uppercase;
         font-size: 20px;
@@ -341,4 +341,33 @@ p {
 }
 .active {
     display: block;
+}
+
+.mobile-profile-container {
+    display: none;
+    padding: 25px 0 30px;
+    background: $theme-color;
+    text-align: center;
+    color: #fff;
+
+    .name {
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .tagline {
+        color: rgba(256, 256, 256, 0.6);
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .profile {
+        border: 5px solid #4b6a78;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
 }

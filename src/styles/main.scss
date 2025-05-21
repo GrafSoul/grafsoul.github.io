@@ -42,7 +42,7 @@ $heart: #fb866a;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    z-index: 100;
+    z-index: 1010;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,4 +68,23 @@ $heart: #fb866a;
 .english.active {
     background-color: $theme-color;
     color: white;
+}
+
+// Дополнительные стили для мобильной версии
+@media (max-width: 767.98px) {
+    .lang-container {
+        top: 15px;
+        right: 15px;
+        transform: none;
+        flex-direction: row;
+
+        button {
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
+    }
+
+    .summary-section {
+        padding-top: 40px;
+    }
 }

@@ -55,4 +55,39 @@ document.addEventListener('DOMContentLoaded', function () {
     // Установка текущего года в футере
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     document.getElementById('currentYear2').textContent = new Date().getFullYear();
+
+    // Мобильное меню
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+
+    // Функция для переключения мобильного меню
+    function toggleMobileMenu() {
+        document.body.classList.toggle('menu-open');
+    }
+
+    // Обработчики событий для кнопки меню и оверлея
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Закрывать меню при клике по ссылкам внутри меню
+    const sidebarLinks = document.querySelectorAll('.sidebar-wrapper a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (window.innerWidth < 768 && document.body.classList.contains('menu-open')) {
+                toggleMobileMenu();
+            }
+        });
+    });
+
+    // Закрывать меню при изменении размера окна
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768 && document.body.classList.contains('menu-open')) {
+            document.body.classList.remove('menu-open');
+        }
+    });
 });
