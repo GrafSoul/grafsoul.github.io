@@ -28,13 +28,13 @@ if (document.readyState === 'complete') {
 // Main functionality
 document.addEventListener('DOMContentLoaded', function () {
     // Ensure jQuery is loaded from the CDN in index.html
-    // $('.en').show();
-    // $('.ru').hide();
-    // $('.russian').addClass('active');
+    $('.en').show();
+    $('.ru').hide();
+    $('.russian').addClass('active');
 
-    $('.ru').show();
-    $('.en').hide();
-    $('.english').addClass('active');
+    // $('.ru').show();
+    // $('.en').hide();
+    // $('.english').addClass('active');
 
     $('.russian').click(function () {
         console.log('russian');
