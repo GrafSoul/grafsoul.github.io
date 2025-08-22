@@ -27,38 +27,64 @@ if (document.readyState === 'complete') {
 
 // Main functionality
 document.addEventListener('DOMContentLoaded', function () {
-    // Ensure jQuery is loaded from the CDN in index.html
-    $('.en').show();
-    $('.ru').hide();
-    $('.russian').addClass('active');
+    // Language toggle functionality
+    const enElements = document.querySelectorAll('.en');
+    const ruElements = document.querySelectorAll('.ru');
+    const russianBtn = document.querySelector('.russian');
+    const englishBtn = document.querySelector('.english');
 
-    // $('.ru').show();
-    // $('.en').hide();
-    // $('.english').addClass('active');
+    // Initialize with English
+    enElements.forEach(el => el.style.display = 'block');
+    ruElements.forEach(el => el.style.display = 'none');
+    russianBtn.classList.add('active');
 
-    $('.russian').click(function () {
-        console.log('russian');
-        $('.en').fadeOut('slow', function () {
-            $('.ru').fadeIn('slow');
+    // Helper function for fade animation
+    const fadeOut = (elements, callback) => {
+        elements.forEach(el => {
+            el.style.transition = 'opacity 0.3s ease';
+            el.style.opacity = '0';
         });
+        setTimeout(() => {
+            elements.forEach(el => el.style.display = 'none');
+            if (callback) callback();
+        }, 300);
+    };
 
-        $('.english').addClass('active');
-        $('.russian').removeClass('active');
+    const fadeIn = (elements) => {
+        elements.forEach(el => {
+            el.style.display = 'block';
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.style.transition = 'opacity 0.3s ease';
+                el.style.opacity = '1';
+            }, 10);
+        });
+    };
+
+    // Russian button click
+    russianBtn.addEventListener('click', function () {
+        fadeOut(enElements, function () {
+            fadeIn(ruElements);
+        });
+        englishBtn.classList.add('active');
+        russianBtn.classList.remove('active');
     });
 
-    $('.english').click(function () {
-        console.log('english');
-        $('.ru').fadeOut('slow', function () {
-            $('.en').fadeIn('slow');
+    // English button click
+    englishBtn.addEventListener('click', function () {
+        fadeOut(ruElements, function () {
+            fadeIn(enElements);
         });
-
-        $('.russian').addClass('active');
-        $('.english').removeClass('active');
+        russianBtn.classList.add('active');
+        englishBtn.classList.remove('active');
     });
 
-    // Установка текущего года в футере
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    document.getElementById('currentYear2').textContent = new Date().getFullYear();
+    // Set current year in footer
+    const currentYear = new Date().getFullYear();
+    const yearElements = document.querySelectorAll('#currentYear, #currentYear2');
+    yearElements.forEach(el => {
+        if (el) el.textContent = currentYear;
+    });
 
     // Мобильное меню
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

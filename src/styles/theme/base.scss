@@ -61,8 +61,8 @@ p {
 .sidebar-wrapper {
     background: $theme-color;
     position: relative;
-    flex: 0 0 240px;
-    width: 240px;
+    flex: 0 0 300px;
+    width: 300px;
     color: #fff;
 
     a {
@@ -275,19 +275,23 @@ p {
 
     .badge {
         margin-bottom: 5px;
-        background-color: rgb(3, 143, 143);
+        background-color: rgb(3, 143, 143); // Приятный teal
         border: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
         a {
             display: inline-block;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: 400;
             text-decoration: none;
-            padding: 5px;
+            padding: 5px 10px;
             color: rgb(255, 255, 255);
         }
 
         &:hover {
             background-color: color.adjust(teal, $lightness: 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(3, 143, 143, 0.2);
         }
     }
 
