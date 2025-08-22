@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const russianBtn = document.querySelector('.russian');
     const englishBtn = document.querySelector('.english');
 
-    // Initialize with English
-    enElements.forEach(el => el.style.display = 'block');
-    ruElements.forEach(el => el.style.display = 'none');
-    russianBtn.classList.add('active');
+    // Initialize with Russian
+    enElements.forEach(el => el.style.display = 'none');
+    ruElements.forEach(el => el.style.display = 'block');
+    englishBtn.classList.add('active');
 
     // Helper function for fade animation
     const fadeOut = (elements, callback) => {
