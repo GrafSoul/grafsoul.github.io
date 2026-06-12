@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import path from 'path';
-import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig(() => {
     return {
@@ -58,30 +57,6 @@ export default defineConfig(() => {
                 '@js': path.resolve(__dirname, 'src/js'),
             },
         },
-        plugins: [
-            viteImagemin({
-                gifsicle: {
-                    optimizationLevel: 8,
-                    interlaced: false,
-                },
-                optipng: {
-                    optimizationLevel: 8,
-                },
-                mozjpeg: {
-                    quality: 80,
-                },
-                svgo: {
-                    plugins: [
-                        {
-                            name: 'removeViewBox',
-                        },
-                        {
-                            name: 'removeEmptyAttrs',
-                            active: false,
-                        },
-                    ],
-                },
-            }),
-        ],
+        plugins: [],
     };
 });
