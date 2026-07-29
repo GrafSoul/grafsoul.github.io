@@ -59,6 +59,9 @@ async function renderPdf(page, file) {
             '.lang-container, .mobile-menu-toggle { display: none !important; }',
             // FOUC-prevention keeps html hidden until the "ready" class is set
             'html { visibility: visible !important; opacity: 1 !important; }',
+            // uniform paper-coloured frame around the card in the PDF only
+            // (padding, not margin — a wrapper margin would collapse through body)
+            'body { padding: 30px !important; }',
         ].join('\n'),
     });
     await page.evaluate(() => document.documentElement.classList.add('ready'));
