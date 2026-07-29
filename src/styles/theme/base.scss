@@ -4,6 +4,7 @@
 
 // Объявляем переменные, которые будут переданы из main.scss
 $theme-color: #4b6a78 !default;
+$accent: #ea7317 !default;
 $text-color: #3f4650 !default;
 $text-color-secondary: #545e6c !default;
 $text-grey: #97aac3 !default;
@@ -32,11 +33,11 @@ h6 {
 }
 
 a {
-    color: color.adjust($theme-color, $lightness: -15%);
+    color: $accent;
 
     &:hover {
         text-decoration: underline;
-        color: color.adjust($theme-color, $lightness: -30%);
+        color: color.adjust($accent, $lightness: -12%);
         @include mix.transition(all 0.4s ease-in-out);
     }
     &:focus {
@@ -88,7 +89,7 @@ p {
         margin-bottom: 0;
     }
     .profile {
-        border: 5px solid #4b6a78;
+        border: 5px solid $accent;
         border-radius: 50%;
         margin-bottom: 15px;
     }
@@ -173,14 +174,14 @@ p {
 }
 
 .main-wrapper {
-    background: #fff;
+    background: #f4f0e6;
     padding: 60px;
     flex: 1;
     .section-title {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 500;
-        color: color.adjust($theme-color, $lightness: -15%);
+        color: $text-color;
         position: relative;
         margin-top: 0;
         margin-bottom: 20px;
@@ -191,7 +192,7 @@ p {
             display: inline-block;
             color: #fff;
             @include mix.border-radius(50%);
-            background: color.adjust($theme-color, $lightness: -15%);
+            background: $accent;
             text-align: center;
             font-size: 16px;
             position: relative;
@@ -242,7 +243,7 @@ p {
         margin-bottom: 5px;
 
         a {
-            color: $theme-color;
+            color: $accent;
         }
     }
     .projects-section {
@@ -267,16 +268,16 @@ p {
     }
 
     .level-bar {
-        height: 12px;
-        background: $smoky-white;
+        height: 6px;
+        background: $divider;
         margin-bottom: 20px;
-        @include mix.border-radius(2px);
+        @include mix.border-radius(3px);
     }
 
     .badge {
         margin-bottom: 5px;
-        background-color: rgb(3, 143, 143); // Приятный teal
-        border: none;
+        background-color: transparent; // контурный чип — как на новом сайте
+        border: 1px solid $text-color;
         border-radius: 4px;
         transition: all 0.3s ease;
         a {
@@ -285,13 +286,15 @@ p {
             font-weight: 400;
             text-decoration: none;
             padding: 5px 10px;
-            color: rgb(255, 255, 255);
+            color: $text-color;
         }
 
         &:hover {
-            background-color: color.adjust(teal, $lightness: 10%);
+            border-color: $accent;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(3, 143, 143, 0.2);
+            a {
+                color: $accent;
+            }
         }
     }
 
@@ -300,7 +303,7 @@ p {
     }
 
     .theme-progress-bar {
-        background: color.adjust($theme-color, $lightness: 40%);
+        background: $accent;
     }
 }
 
@@ -370,7 +373,7 @@ p {
     }
 
     .profile {
-        border: 5px solid #4b6a78;
+        border: 5px solid $accent;
         border-radius: 50%;
         margin-bottom: 15px;
     }
